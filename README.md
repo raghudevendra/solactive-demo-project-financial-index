@@ -6,7 +6,7 @@
 
 3) Download the zip or clone the Git repository. Unzip the zip file (if you downloaded one) 
 
-		$ git clone https://github.com/raghudevendra/solactive-demo.git
+		$ git clone https://github.com/raghudevendra/solactive-demo-project-financial-index.git
 
 4) Open STS/Eclipse File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip
 
