@@ -1,16 +1,11 @@
 package com.solactive.demo.application.model;
 
-import javax.validation.constraints.NotNull;
-
 public class IndexInformation {
 
-	@NotNull(message =  "Instrument Name is required")
 	private String instrument;
 
-	@NotNull(message =  "Price is required")
 	private double price;
 
-	@NotNull(message =  "Timestamp is required")
 	private long timestamp;
 
 	public String getInstrument() {
