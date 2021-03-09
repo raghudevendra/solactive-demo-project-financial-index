@@ -2,12 +2,9 @@ package com.solactive.demo.application.controller;
 
 import java.util.Date;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,8 +33,7 @@ public class FinancialController {
 	@ApiOperation("Stores the Index Information for a Instrument name")
 	@ApiResponses(value = { @ApiResponse(code = 201, message = "OK"),
 			@ApiResponse(code = 204, message = "Request Exceeded Time Limit") })
-	public ResponseEntity<?> createIndexInformation(@Valid @RequestBody IndexInformation indexInformation)
-			throws MethodArgumentNotValidException {
+	public ResponseEntity<?> createIndexInformation(@RequestBody IndexInformation indexInformation) {
 		long currentTimeinMilli = new Date().getTime();
 		long calculatedTime = currentTimeinMilli - indexInformation.getTimestamp();
 
